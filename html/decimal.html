@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema Decimal - Transcode.com</title>
+  <link rel="stylesheet" href="../css/c++.css">
+  <link rel="stylesheet" href="../css/stylost.css">
+</head>
+
+<body>
+
+   <header id="inicio">
+    <div class="titulo">
+      <img class="titulo__img" src="../img/trans.png" alt="Logotipo Transcode">
+    </div>
+
+    <div class="eslogan">
+      Transformando números entre sistemas digitales
+    </div>
+  </header>
+
+   <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="index.html" class="nav__link">Inicio</a>
+      </li>
+      <li class="nav__item">
+        <a href="decimal.html" class="nav__link">Decimal</a>
+      </li>
+      <li class="nav__item">
+        <a href="binario.html" class="nav__link">Binario</a>
+      </li>
+      <li class="nav__item">
+        <a href="octal.html" class="nav__link">Octal</a>
+      </li>
+      <li class="nav__item">
+        <a href="hexadecimal.html" class="nav__link">Hexadecimal</a>
+      </li>
+    </ul> 
+  </nav>
+
+   <main>
+
+     <div class="contenido">
+      <h1 class="titulo__contenido">¿Qué es el sistema decimal?</h1>
+
+      <div class="contendi__contenedor">
+        <p>
+          El sistema decimal es el sistema de numeración más utilizado en la vida
+          cotidiana. Es un sistema de base 10, lo que significa que utiliza diez
+          símbolos diferentes para representar todos los números.
+        </p>
+
+        <p>
+          Estos símbolos son: 0, 1, 2, 3, 4, 5, 6, 7, 8 y 9.
+          A partir de estos dígitos se pueden formar todos los números que usamos
+          para contar, medir y realizar cálculos.
+        </p>
+      </div>
+
+      <img src="../img/base10png.png" alt="Base 10 Sistema Decimal">
+
+      <div class="contendi__contenedor">
+        <p>
+          El sistema decimal es llamado también sistema de numeración posicional,
+          porque el valor de cada dígito depende de la posición en la que se
+          encuentra dentro del número.
+        </p>
+      </div>
+
+      <h2 class="subtitulo">Valor posicional en el sistema decimal</h2>
+
+      <div class="contendi__contenedor">
+        <p>
+          En el sistema decimal cada posición representa una potencia de 10.
+          Esto significa que cada lugar dentro de un número tiene un valor
+          diferente dependiendo de su posición.
+        </p>
+
+        <p>
+          Las posiciones principales son:
+        </p>
+
+        <p>
+          Unidades (10⁰)<br>
+          Decenas (10¹)<br>
+          Centenas (10²)<br>
+          Unidades de mil (10³)
+        </p>
+
+        <p>
+          Cada vez que avanzamos una posición hacia la izquierda, el valor
+          se multiplica por 10.
+        </p>
+      </div>
+
+      <h2 class="subtitulo">Ejemplo de valor posicional</h2>
+
+      <div class="contendi__contenedor">
+        <p>
+          Tomemos el número:
+        </p>
+
+        <p>
+          <strong>347</strong>
+        </p>
+
+        <p>
+          En este número cada dígito tiene un valor diferente según su posición.
+        </p>
+
+        <p>
+          3 × 100 = 300 (centenas)<br>
+          4 × 10 = 40 (decenas)<br>
+          7 × 1 = 7 (unidades)
+        </p>
+
+        <p>
+          Si sumamos los valores obtenemos nuevamente el número original:
+        </p>
+
+        <p>
+          300 + 40 + 7 = 347
+        </p>
+      </div>
+
+      <h2 class="subtitulo">Representación de números grandes</h2>
+
+      <div class="contendi__contenedor">
+        <p>
+          Gracias al valor posicional el sistema decimal permite representar
+          números muy grandes de forma sencilla. Solo es necesario añadir más
+          posiciones hacia la izquierda.
+        </p>
+
+        <p>
+          Por ejemplo:
+        </p>
+
+        <p>
+          <strong>1,245</strong>
+        </p>
+
+        <p>
+          Se interpreta como:
+        </p>
+
+        <p>
+          1 × 1000 = 1000<br>
+          2 × 100 = 200<br>
+          4 × 10 = 40<br>
+          5 × 1 = 5
+        </p>
+
+        <p>
+          Sumando todos los valores:
+        </p>
+
+        <p>
+          1000 + 200 + 40 + 5 = 1245
+        </p>
+      </div>
+
+      <h2 class="subtitulo">Importancia del sistema decimal</h2>
+
+      <div class="contendi__contenedor">
+        <p>
+          El sistema decimal es fundamental en matemáticas, ciencia,
+          ingeniería y en la vida diaria. Es el sistema que utilizamos
+          para contar objetos, manejar dinero, medir distancias y realizar
+          operaciones matemáticas.
+        </p>
+      </div>
+      <div class="cont__sub">
+      <h2 class="subtitulo ">Código Decimal a Binario</h2>
+      <h2 class="subtitulo ">Código Decimal a Octal</h2>
+            <h2 class="subtitulo ">Código Decimal a Hexadecimal</h2>
+</div>
+<h2 class="subtitulo">Código del conversiones</h2>
+<div class="contenedor-codigos">
+      <div class="codigo">
+        <pre><code>#include&lt;iostream&gt;
+using namespace std;
+
+class conversion {
+public:
+    int vendicmal;
+
+    void vdecimal(){
+        //==============================
+        // Conversión de Decimal a Binario
+        //==============================
+        cout<<"CONVERSION DE DECIMAL A BINARIO" <<endl;
+        cout << "Ingrese el valor decimal :" << endl;
+        cin >> vendicmal;
+    }
+};
+
+class binario : public conversion {
+public:
+    string vbinario = "";
+
+    void pedirDecimal(){
+        vdecimal();
+    }
+
+    void convertir(){
+
+        if (vendicmal == 0) {
+            cout << "Binario: 0" << endl;
+            return;
+        }
+
+        int i = vendicmal;
+
+        while (i > 0) {
+
+            int residuo = i % 2;
+            vbinario = to_string(residuo) + vbinario;
+            i = i / 2;
+        }
+
+        cout << "El valor en binario es : " << vbinario << endl;
+    }
+};
+
+int main(){
+    binario b;
+    b.pedirDecimal();
+    b.convertir();
+    return 0;
+}</code></pre>
+       <div class="boton-descarga">
+        <a  class="boton__link" href="../cpp/decimal/Decimal a Binario.cpp" download>
+          Descargar código C++
+        </a>
+      </div>
+      </div>
+      
+
+<div class="codigo">
+        <pre><code>#include&lt;iostream&gt;
+#include <iostream>
+using namespace std;
+class Octalad {
+
+public:
+
+    void mesaje (){
+
+        cout<<"CONVERSION DE DECIMAL A OCTAL"<<endl;
+    }
+
+    string voctal = "";
+    int vdo;
+
+    void pedirvdo(){
+
+        cout<<"Ingrese el valor en decimal" << endl;
+        cin>>vdo;
+    }
+
+    void convertirdo(){
+
+        if (vdo == 0) {
+
+            cout << "Octal: 0" << endl;
+            return;
+        }
+
+        int i = vdo;
+
+        while (i > 0) {
+
+            int residuo = i % 8;
+            voctal = to_string(residuo) + voctal;
+            i = i / 8;
+        }
+
+        cout << "El valor en octal es: " << voctal << endl;
+    }	
+};
+int main (
+){
+	Octalad od;
+	od.mesaje ();
+	od.pedirvdo();
+	od.convertirdo();
+	return 0;
+}
+</code></pre>
+       <div class="boton-descarga">
+        <a  class="boton__link" href="../cpp/decimal/Decimal a octal.cpp" download>
+          Descargar código C++
+        </a>
+      </div>
+</div>
+
+      <div class="codigo">
+        <pre><code>#include&lt;iostream&gt;
+#include<iostream>
+using namespace std;
+class daHexadecimal  {
+
+public:
+
+    string vhex = "";
+    int vde;
+
+    void pedirvde(){
+
+        cout << "CONVERSION DE DECIMAL A HEXADECIMAL" << endl;
+        cout << "Ingrese el valor decimal:" << endl;
+        cin >> vde;
+    }
+
+    void convertirdah(){
+
+        string hex = "0123456789ABCDEF";
+
+        if (vde == 0){
+
+            cout << "Hexadecimal: 0" << endl;
+            return;
+        }
+
+        int i = vde;
+
+        while(i > 0){
+
+            int residuo = i % 16;
+            vhex = hex[residuo] + vhex;
+            i = i / 16;
+        }
+
+        cout << "El valor en hexadecimal es: " << vhex << endl;
+    }
+};
+int main () {
+	daHexadecimal dah;
+	dah.pedirvde();
+	dah.convertirdah();
+	return 0;
+}
+</code></pre>
+       <div class="boton-descarga">
+        <a  class="boton__link" href="../cpp/decimal/Decimal a hexadecimal.cpp" download>
+          Descargar código C++
+        </a>
+      </div>
+      </div>
+
+    </div>
+    </div>
+
+  </main>
+
+   <a href="#inicio" class="boton-inicio">↑</a>
+
+   <footer>
+    <ul class="fot__list">
+      <li class="fot__item">By Anderson Tonato</li>
+      <li class="fot__item"><a href="mailto:tonatoanderson5@gmail.com">Enviar email a</a></li>
+      <li class="fot__item">© 2026 TransCode.com</li>
+    </ul>
+  </footer>
+
+</body>
+</html>
