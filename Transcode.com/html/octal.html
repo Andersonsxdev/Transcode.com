@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Decimal a Octal - Transcode.com</title>
+  <link rel="stylesheet" href="../css/stylost.css">
+   <link rel="stylesheet" href="../css/c++.css">
+</head>
+
+<body>
+
+   <header id="inicio" class="header">
+    <div class="titulo">
+      <img class="titulo__img" src="../img/trans.png" alt="Logotipo Transcode">
+    </div>
+
+    <div class="eslogan">
+      Transformando números entre sistemas digitales
+    </div>
+  </header>
+
+   <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="index.html" class="nav__link">Inicio</a>
+      </li>
+      <li class="nav__item">
+        <a href="decimal.html" class="nav__link">Decimal</a>
+      </li>
+      <li class="nav__item">
+        <a href="binario.html" class="nav__link">Binario</a>
+      </li>
+      <li class="nav__item">
+        <a href="octal.html" class="nav__link">Octal</a>
+      </li>
+      <li class="nav__item">
+        <a href="hexadecimal.html" class="nav__link">Hexadecimal</a>
+      </li>
+    </ul> 
+  </nav>
+
+   <main class="main">
+
+     <section class="contenido">
+      <h1 class="titulo__contenido">¿Qué es el sistema octal?</h1>
+
+      <div class="contendi__contenedor">
+        <p>
+          El sistema octal es un sistema de numeración que utiliza base 8. Esto significa
+          que solamente utiliza ocho símbolos diferentes para representar todos los
+          números. Estos símbolos son: 0, 1, 2, 3, 4, 5, 6 y 7.
+        </p>
+
+        <p>
+          Cada posición dentro de un número octal representa una potencia de 8. Este
+          sistema fue muy utilizado en informática en los primeros años de las
+          computadoras porque permitía representar números binarios de una forma
+          más compacta y fácil de leer.
+        </p>
+      </div>
+
+      <h2 class="subtitulo">Uso del sistema octal en informática</h2>
+
+      <div class="contendi__contenedor">
+        <p>
+          En programación y arquitectura de computadoras el sistema octal se utilizaba
+          para simplificar la representación de números binarios. Cada dígito octal
+          representa exactamente tres bits en binario.
+        </p>
+
+        <p>
+          Por esta razón muchos sistemas antiguos utilizaban números octales para
+          representar direcciones de memoria, permisos de archivos y configuraciones
+          internas del sistema.
+        </p>
+      </div>
+    </section>
+
+     <section class="contenido">
+      <h2 class="subtitulo">Conversión Manual</h2>
+
+      <div class="contendi__contenedor">
+        <p>
+          Para convertir un número decimal a octal se utiliza el método de divisiones
+          sucesivas entre 8. Se divide el número entre 8 y se guarda el residuo.
+          Luego el resultado se vuelve a dividir entre 8 hasta que el cociente sea 0.
+          Finalmente los residuos se leen desde el último hasta el primero.
+        </p>
+      </div>
+
+      <h3 class="subtitulo">Ejemplo</h3>
+
+      <div class="contendi__contenedor">
+        <p>
+          125 ÷ 8 = 15 residuo 5<br>
+          15 ÷ 8 = 1 residuo 7<br>
+          1 ÷ 8 = 0 residuo 1
+        </p>
+
+        <p>
+          Leyendo los residuos desde abajo hacia arriba obtenemos:
+        </p>
+
+        <p>
+          <strong>125 en decimal = 175 en octal</strong>
+        </p>
+      </div>
+
+      <h2 class="subtitulo">Código del programa en C++</h2>
+
+      <div class="cont__sub">
+      <h2 class="subtitulo ">Código Octal a Decimal</h2>
+      <h2 class="subtitulo ">Código Octal a Binario</h2>
+            <h2 class="subtitulo ">Código Octal a Hexadecimal</h2>
+</div>
+
+<div class="contenedor-codigos">
+      <div class="codigo">
+        <pre><code>#include&lt;iostream&gt;
+#include<iostream>
+using namespace std;
+class ocade {
+
+public :
+
+    int valdecimal=0;
+    string vaoctal="";
+
+    void pedirvoctal(){
+
+        cout <<" CONVERSION DE OCTAL A DECIMAL " << endl;
+        cout<<"Ingrese un valor en octal:"<<endl;
+        cin>>vaoctal;
+    }
+
+    void conversionoad(){
+
+        if (vaoctal == "0") {
+
+            cout << "Decimal: 0" << endl;
+            return;	
+        }
+
+        int d = stoi(vaoctal);
+        int exponente = 1;
+
+        while (d > 0) {
+
+            int valord = d % 10;
+            valdecimal = valdecimal + valord * exponente;
+            exponente = exponente * 8;
+            d = d / 10;
+        }
+
+        cout << "El valor decimal es :" << valdecimal << endl;
+    }
+};
+int main (){
+	ocade oad;
+	oad.pedirvoctal();
+	oad.conversionoad();
+	return 0;
+}
+
+</code></pre>
+       <div class="boton-descarga">
+        <a  class="boton__link" href="../cpp/octal/octal a decimal.cpp" download>
+          Descargar código C++
+        </a>
+      </div>
+      </div>
+      
+
+<div class="codigo ">
+        <pre ><code>#include&lt;iostream&gt;
+#include<iostream>
+using namespace std;
+class octalbinario  {
+
+public:
+
+    int valdecimal = 0;
+    string vaoctal = "";
+    string vbinario = "";
+
+    void pedirOctal(){
+
+        cout << "CONVERSION DE OCTAL A BINARIO" << endl;
+        cout << "Ingrese un valor octal:" << endl;
+        cin >> vaoctal;
+    }
+
+    void convertirOb(){
+
+        int d = stoi(vaoctal);
+        int exponente = 1;
+
+        while (d > 0){
+
+            int valord = d % 10;
+            valdecimal = valdecimal + valord * exponente;
+            exponente = exponente * 8;
+            d = d / 10;
+        }
+
+        if (valdecimal == 0){
+
+            cout << "Binario: 0" << endl;
+            return;
+        }
+
+        int i = valdecimal;
+
+        while(i > 0){
+
+            int residuo = i % 2;
+            vbinario = to_string(residuo) + vbinario;
+            i = i / 2;
+        }
+
+        cout << "El valor en binario es: " << vbinario << endl;
+    }
+};
+int main (){
+	octalbinario  oab;
+	oab.pedirOctal();
+	oab.convertirOb();
+	return 0;
+}
+</code></pre>
+       <div class="boton-descarga">
+        <a  class="boton__link" href="../cpp/octal/octal a binario.cpp" download>
+          Descargar código C++
+        </a>
+      </div>
+</div>
+
+      <div class="codigo">
+        <pre><code>#include&lt;iostream&gt;
+        }#include<iostream>
+using namespace std;
+class octalhexa  {
+
+public:
+
+    int valdecimal = 0;
+    string vaoctal = "";
+    string vhexa = "";
+
+    void pedirOctalHexa(){
+
+        cout << "CONVERSION DE OCTAL A HEXADECIMAL" << endl;
+        cout << "Ingrese un valor octal:" << endl;
+        cin >> vaoctal;
+    }
+
+    void convertirOh(){
+
+        int d = stoi(vaoctal);
+        int exponente = 1;
+
+        while (d > 0){
+
+            int valord = d % 10;
+            valdecimal = valdecimal + valord * exponente;
+            exponente = exponente * 8;
+            d = d / 10;
+        }
+
+        string hex = "0123456789ABCDEF";
+
+        if (valdecimal == 0){
+
+            cout << "Hexadecimal: 0" << endl;
+            return;
+        }
+
+        int i = valdecimal;
+
+        while(i > 0){
+
+            int residuo = i % 16;
+            vhexa = hex[residuo] + vhexa;
+            i = i / 16;
+        }
+
+        cout << "El valor hexadecimal es: " << vhexa << endl;
+    }
+};
+
+int main (){
+	octalhexa oah;
+	oah.pedirOctalHexa();
+	oah.convertirOh();
+	return 0;
+}
+</code></pre>
+       <div class="boton-descarga">
+        <a  class="boton__link" href="../cpp/octal/octal a hexadecimal.cpp" download>
+          Descargar código C++
+        </a>
+      </div>
+      </div>
+
+    </div>
+    </div>
+
+  </main>
+
+   <a href="#inicio" class="boton-inicio">↑</a>
+
+   <footer>
+    <ul class="fot__list">
+      <li class="fot__item">By Anderson Tonato</li>
+      <li class="fot__item"><a href="mailto:tonatoanderson5@gmail.com">Enviar email a</a></li>
+      <li class="fot__item">© 2026 TransCode.com</li>
+    </ul>
+  </footer>
+
+</body>
+</html>
