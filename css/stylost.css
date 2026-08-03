@@ -1,0 +1,155 @@
+body {
+  background-color: #9eb2c9;
+  margin: 0;
+}
+
+#inicio {
+  margin: 10px;
+  border: 3px solid rgb(26, 60, 106);
+  border-radius: 9px;
+  background-color: #4f5d86;
+  text-align: center;
+}
+
+.eslogan {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.titulo__img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+}
+
+.nav {
+  background-color: #586387;
+  height: auto;
+  border-radius: 1em;
+  padding: 8px;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.nav__item {
+  border: 1px solid #8a95a4;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.nav__item:hover {
+  background: #aabcd1;
+}
+
+.nav__item:hover .nav__link {
+  color: #4f5d86;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 18px;
+  margin: 0;
+  display: block;
+}
+.titulo__contenido, .subtitulo {
+  border: 3px solid #586387;
+  margin-left: 5px;
+  color: #fff;
+  width: max-content;
+  max-width: 90%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 9px;
+}
+
+h1::first-letter {
+  color: #4f5d86;
+  font-size: 1.5em;
+}
+
+.contenido {
+  margin: 10px;
+  border: 3px solid #4f5d86;
+  text-align: justify;
+  border-radius: 9px;
+  box-shadow: 0 0 50px 0 #435284;
+  margin-bottom: 30px;
+}
+
+p {
+  margin: 10px;
+  font-size: 1em;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.contendi__contenedor {
+  border: 8px solid #4f5d86;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #879cbe;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+}
+
+.boton-inicio {
+  display: block;
+  width: fit-content;
+  margin: 10px 15px 10px auto;
+  padding: 10px 15px;
+  background-color: #435284;
+  border: 3px solid #37436b;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.boton-inicio:hover {
+  transform: translateY(-3px);
+}
+
+footer {
+  margin-top: 22px;
+  border: 6px solid #37436b;
+  border-radius: 4px;
+  margin-bottom: 0;
+  background-color: #879cbe;
+}
+
+.fot__list {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #3f4d7c;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.fot__item {
+  font-size: 20px;
+  font-weight: bold;
+}
